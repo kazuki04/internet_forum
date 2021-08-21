@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='../static/css/reset.css'>
+    <link rel='stylesheet' href='../static/css/new.css'>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="internet-forum-title">
+        <a href="/">
+          <h1>Internet Forum</h1>
+        </a>
+      </div>
+      <div class="search-field">
+        <input type="text" class="search-input" placeholder="search field">
+      </div>
+    </div>
+    <div class="new-topic-field">
+      <h1>New Topic</h1>
+      <form action="/save/" method="POST">
+        <ul class="form-field">
+          <li class="form-item">
+            <input id="title" class="input-item" type="text" name="title" placeholder="Title" required>
+          </li>
+          <li class="form-item">
+            <textarea name="body" class="input-item" id="text" cols="30" rows="10" placeholder="Body" required></textarea>
+          </li>
+          <li class="form-item">
+            <input type="submit" value="Submit" id="submit-btn">
+          </li>
+        </ul>
+      </form>
+    </div>
+  </body>
+</html>
+
+

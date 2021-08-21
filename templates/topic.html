@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet Forum</title>
+    <link rel='stylesheet' href='../static/css/reset.css'>
+    <link rel='stylesheet' href='../static/css/topic.css'>
+  </head>
+  <body>
+    <div class="header">
+      <div class="internet-forum-title">
+        <a href="/">
+          <h1>Internet Forum</h1>
+        </a>
+      </div>
+      <div class="search-field">
+        <input type="text" class="search-input" placeholder="search field">
+      </div>
+    </div>
+    <div class="main">
+      <div class="left-side">
+        <div class="topic-item">
+          <h3 class="topic-title">{{.Title}}</h3>
+          <p class="topic-body">{{.Body}}</p>
+          <p class="topic-created-date">{{.CreatedDate}}</p>
+        </div>
+        <div class="comment-field"></div>
+        <div class="comment-form-field">
+          <form action="/comment/">
+            <textarea name="comment" id="" cols="30" rows="10"></textarea>
+            <input type="submit" value="comment">
+          </form>
+        </div>
+      </div>
+      <div class="right-side"></div>
+    </div>
+    <footer>
+      <p>(c)copy right</p>
+    </footer>
+  </body>
+</html>

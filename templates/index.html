@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet Forum</title>
+    <link rel='stylesheet' href='../static/css/reset.css'>
+    <link rel='stylesheet' href='../static/css/index.css'>
+  </head>
+  <body>
+    <div class="header">
+      <div class="internet-forum-title">
+        <a href="/">
+          <h1>Internet Forum</h1>
+        </a>
+      </div>
+      <div class="header-right-field">
+        <div class="new-topic-field">
+          <a href="/new/">Write New Topic</a>
+        </div>
+        <div class="search-field">
+          <input type="text" class="search-input" placeholder="search field">
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <div class='left-side'>
+        <ul class="topic-list">
+          {{ range $topic := . }}
+            <li class="topic-item">
+              <a href="/topic/{{$topic.Title}}">
+                <h3 class="topic-title">{{$topic.Title}}</h3>
+              </a>
+              <p class="topic-body">{{$topic.Body}}</p>
+              <p class="topic-created-date">{{$topic.CreatedDate}}</p>
+            </li>
+          {{end}}
+        </ul>
+      </div>
+      <div class="right-side">
+        
+      </div>
+    </div>
+    <footer>
+      <p>(c)copy right</p>
+    </footer>
+  </body>
+</html>
